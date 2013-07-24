@@ -1,4 +1,14 @@
 <?php
+/*
+$wgVisualEditorPluginModules[] = 'ext.ve-gmap';
+
+$wgResourceModules['ext.ve-gmap'] = array(
+	'scripts' => array(
+		'js/test.js'
+	),
+	'localBasePath' => dirname( __FILE__ )
+);
+*/
 
 // Hooks
 $wgHooks['ParserFirstCallInit'][] = 'wfMapParserInit';
