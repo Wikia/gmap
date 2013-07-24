@@ -8,6 +8,7 @@ function wfMapParserInit( Parser $parser ) {
 	return true;
 }
 
+// Render map
 function wfMapRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 	$params = array();
 	$params['markers'] = $args['lat'] . ',' . $args['long'];
@@ -15,5 +16,5 @@ function wfMapRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 	$params['zoom'] = $args['zoom'];
 	$params['maptype'] = 'roadmap';
 	$params['sensor'] = 'false';
-	return '<img src="http://maps.googleapis.com/maps/api/staticmap?' . wfArrayToCgi( $params ) . '"/>';
+	return '<div style="float: left;"><img src="http://maps.googleapis.com/maps/api/staticmap?' . wfArrayToCgi( $params ) . '"/></div>';
 }
