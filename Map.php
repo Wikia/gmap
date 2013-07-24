@@ -4,7 +4,7 @@
 $wgHooks['ParserFirstCallInit'][] = 'wfMapParserInit';
 
 function wfMapParserInit( Parser $parser ) {
-	$parser->setHook( 'map', 'wfMapRender' );
+	$parser->setHook( 'gmap', 'wfMapRender' );
 	return true;
 }
 
