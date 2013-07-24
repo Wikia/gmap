@@ -10,7 +10,7 @@ function wfMapParserInit( Parser $parser ) {
 
 function wfMapRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 	$params = array();
-	$params['markers']  = $params['center'] = $args['lat'] . ',' . $args['long'];
+	$params['markers'] = $args['lat'] . ',' . $args['long'];
 	$params['size'] = $args['width'] . 'x' . $args['height'];
 	$params['zoom'] = $args['zoom'];
 	$params['maptype'] = 'roadmap';
