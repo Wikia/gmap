@@ -1,18 +1,27 @@
 <?php
-/*
-$wgVisualEditorPluginModules[] = 'ext.ve-gmap';
+/**
+ * GMap extension
+ */
 
-$wgResourceModules['ext.ve-gmap'] = array(
+// Define ResourceLoader module
+$wgResourceModules['ext.gmap'] = array(
 	'scripts' => array(
-		'js/test.js'
+		'js/ve.dm.GMapNode.js',
+		'js/ve.ce.GMapNode.js'
 	),
-	'localBasePath' => dirname( __FILE__ )
+	'dependencies' => array( 'ext.visualEditor.core' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'gmap'
 );
-*/
+
+// Add defined module to VisualEditor as a plugin
+// (It's important to include/require GMap.php after VisualEditor.php in LocalSettings.php)
+$wgVisualEditorPluginModules[] = 'ext.gmap';
 
 // Hooks
 $wgHooks['ParserFirstCallInit'][] = 'wfMapParserInit';
 
+// Setup "gmap" parser hook
 function wfMapParserInit( Parser $parser ) {
 	$parser->setHook( 'gmap', 'wfMapRender' );
 	return true;
