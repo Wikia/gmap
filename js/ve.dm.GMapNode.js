@@ -30,7 +30,17 @@ ve.dm.GMapNode.static.toDataElement = function ( domElements ) {
 };
 
 ve.dm.GMapNode.static.toDomElements = function ( dataElement, doc ) {
-	return [ doc.createElement( 'div' ) ];
+	var attribs = dataElement.attributes,
+		el = doc.createElement( 'div' );
+
+	if ( ve.compare( attribs.mw.attrs, attribs.params ) ) {
+		el.setAttribute( 'data-mw', attribs.originalMw );
+	} else {
+		attribs.mw.attrs = attribs.params;
+		el.setAttribute( 'data-mw', JSON.stringify( attribs.mw ) );
+	}
+
+	return [ el ];
 };
 
 ve.dm.modelRegistry.register( ve.dm.GMapNode );

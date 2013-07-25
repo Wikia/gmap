@@ -19,6 +19,10 @@ ve.ce.GMapNode.static.name = 'gmap';
 
 ve.ce.GMapNode.static.tagName = 'div';
 
+ve.ce.GMapNode.prototype.onAttributeChange = function () {
+	this.updateMapUrl();
+};
+
 ve.ce.GMapNode.prototype.updateMapUrl = function() {
 	var params = this.model.getAttribute( 'params' );
 	this.$imgMap.attr(

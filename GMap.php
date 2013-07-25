@@ -8,7 +8,8 @@ $wgResourceModules['ext.gmap'] = array(
 	'scripts' => array(
 		'js/ve.dm.GMapNode.js',
 		'js/ve.ce.GMapNode.js',
-		'js/ve.ui.GMapEditButtonTool.js'
+		'js/ve.ui.GMapEditButtonTool.js',
+		'js/ve.ui.GMapEditDialog.js'
 	),
 	'dependencies' => array( 'ext.visualEditor.core' ),
 	'localBasePath' => dirname( __FILE__ ),
