@@ -49,7 +49,6 @@ ve.ce.GMapNode.prototype.onAttributeChange = function () {
 	this.setImageURL();
 };
 
-
 /**
  * Sets image src attribute.
  *
