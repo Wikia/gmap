@@ -1,8 +1,22 @@
-ve.dm.GMapNode = function VeDmGMapNode( length, element ) {
+/**
+ * DataModel GMap.
+ *
+ * @class
+ * @extends ve.dm.LeafNode
+ * @constructor
+ * @param {number} [length] Length of content data in document
+ * @param {Object} [element] Reference to element in linear model
+ */
+ ve.dm.GMapNode = function VeDmGMapNode( length, element ) {
+ 	// Parent constructor
 	ve.dm.LeafNode.call( this, 0, element );
 };
 
+/* Inheritance */
+
 ve.inheritClass( ve.dm.GMapNode, ve.dm.LeafNode );
+
+/* Static Properties */
 
 ve.dm.GMapNode.static.name = 'gmap';
 
@@ -20,9 +34,9 @@ ve.dm.GMapNode.static.toDataElement = function ( domElements ) {
 	dataElement = {
 		'type': 'gmap',
 		'attributes': {
+			'attrs': mwData.attrs,
 			'mw': mwData,
-			'originalMw': mwDataJSON,
-			'params': mwData.attrs
+			'originalMw': mwDataJSON
 		}
 	};
 
@@ -30,17 +44,19 @@ ve.dm.GMapNode.static.toDataElement = function ( domElements ) {
 };
 
 ve.dm.GMapNode.static.toDomElements = function ( dataElement, doc ) {
-	var attribs = dataElement.attributes,
+	var attributes = dataElement.attributes,
 		el = doc.createElement( 'div' );
 
-	if ( ve.compare( attribs.mw.attrs, attribs.params ) ) {
-		el.setAttribute( 'data-mw', attribs.originalMw );
+	if ( ve.compare( attributes.attrs, attributes.mw.attrs ) ) {
+		el.setAttribute( 'data-mw', attributes.originalMw );
 	} else {
-		attribs.mw.attrs = attribs.params;
-		el.setAttribute( 'data-mw', JSON.stringify( attribs.mw ) );
+		attribs.mw.attrs = attributes.attrs;
+		el.setAttribute( 'data-mw', JSON.stringify( attributes.mw ) );
 	}
 
 	return [ el ];
 };
+
+/* Registration */
 
 ve.dm.modelRegistry.register( ve.dm.GMapNode );

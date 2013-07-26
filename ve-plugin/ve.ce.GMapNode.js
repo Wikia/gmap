@@ -50,14 +50,14 @@ ve.ce.GMapNode.prototype.onAttributeChange = function () {
 };
 
 ve.ce.GMapNode.prototype.setImageURL = function() {
-	var params = this.model.getAttribute( 'params' );
+	var attrs = this.model.getAttribute( 'attrs' );
 	this.$image
 		.attr(
 			'src',
-			this.generateImageURL( params.lat, params.long, params.width, params.height, params.zoom )
+			this.generateImageURL( attrs.lat, attrs.long, attrs.width, attrs.height, attrs.zoom )
 		)
-		.height( params.height )
-		.width( params.width );
+		.height( attrs.height )
+		.width( attrs.width );
 };
 
 ve.ce.GMapNode.prototype.generateImageURL = function( latitude, longitude, width, height, zoom ) {
