@@ -49,6 +49,11 @@ ve.ce.GMapNode.prototype.onAttributeChange = function () {
 	this.setImageURL();
 };
 
+/**
+ * Sets image src attribute.
+ *
+ * @method
+ */
 ve.ce.GMapNode.prototype.setImageURL = function() {
 	var attrs = this.model.getAttribute( 'attrs' );
 	this.$image
@@ -60,6 +65,11 @@ ve.ce.GMapNode.prototype.setImageURL = function() {
 		.width( attrs.width );
 };
 
+/**
+ * Constructs Google Maps static map image URL.
+ *
+ * @method
+ */
 ve.ce.GMapNode.prototype.generateImageURL = function( latitude, longitude, width, height, zoom ) {
 	var params = [];
 	params.push( 'markers=' + latitude + ',' + longitude );
