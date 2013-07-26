@@ -145,7 +145,7 @@ ve.ui.GMapEditDialog.prototype.onClose = function ( action ) {
 			'width': this.widthInput.getValue(),
 			'height': this.heightInput.getValue(),
 			'zoom': this.zoomInput.getValue()
-		}
+		};
 		surfaceModel.change(
 			ve.dm.Transaction.newFromAttributeChanges(
 				documentModel, this.gmapNode.getOffset(), { 'attrs': attrs }
