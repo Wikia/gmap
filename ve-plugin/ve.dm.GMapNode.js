@@ -1,8 +1,9 @@
 /**
- * DataModel GMap.
+ * DataModel GMap Node.
  *
  * @class
  * @extends ve.dm.LeafNode
+ *
  * @constructor
  * @param {number} [length] Length of content data in document
  * @param {Object} [element] Reference to element in linear model
