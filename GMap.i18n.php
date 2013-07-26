@@ -6,5 +6,6 @@ $messages['en'] = array(
 	'visualeditor-dialog-gmap-longitude' => 'Longitude',
 	'visualeditor-dialog-gmap-width' => 'Width',
 	'visualeditor-dialog-gmap-height' => 'Height',
-	'visualeditor-dialog-gmap-zoom' => 'Zoom'
+	'visualeditor-dialog-gmap-zoom' => 'Zoom',
+	'visualeditor-dialog-gmap-title' => 'GMap settings'
 );

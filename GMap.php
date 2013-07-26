@@ -24,7 +24,8 @@ $wgResourceModules['ext.gmap'] = array(
 		'visualeditor-dialog-gmap-longitude',
 		'visualeditor-dialog-gmap-width',
 		'visualeditor-dialog-gmap-height',
-		'visualeditor-dialog-gmap-zoom'
+		'visualeditor-dialog-gmap-zoom',
+		'visualeditor-dialog-gmap-title'
 	),
 	'dependencies' => array( 'ext.visualEditor.core' ),
 	'localBasePath' => dirname( __FILE__ ),

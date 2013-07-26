@@ -8,6 +8,8 @@ ve.inheritClass( ve.ui.GMapEditDialog, ve.ui.Dialog );
 
 ve.ui.GMapEditDialog.static.icon = 'map';
 
+ve.ui.GMapEditDialog.static.titleMessage = 'visualeditor-dialog-gmap-title';
+
 ve.ui.GMapEditDialog.prototype.initialize = function () {
 	ve.ui.Dialog.prototype.initialize.call( this );
 
