@@ -8,7 +8,7 @@
  * @param {Object} [config] Config options
  */
  ve.ui.GMapEditButtonTool = function VeUiGMapEditButtonTool( toolbar, config ) {
- 	// Parent constructor
+	// Parent constructor
 	ve.ui.DialogButtonTool.call( this, toolbar, config );
 };
 

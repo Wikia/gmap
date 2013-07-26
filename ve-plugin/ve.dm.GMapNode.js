@@ -9,7 +9,7 @@
  * @param {Object} [element] Reference to element in linear model
  */
  ve.dm.GMapNode = function VeDmGMapNode( length, element ) {
- 	// Parent constructor
+	// Parent constructor
 	ve.dm.LeafNode.call( this, 0, element );
 };
 
@@ -51,7 +51,7 @@ ve.dm.GMapNode.static.toDomElements = function ( dataElement, doc ) {
 	if ( ve.compare( attributes.attrs, attributes.mw.attrs ) ) {
 		el.setAttribute( 'data-mw', attributes.originalMw );
 	} else {
-		attribs.mw.attrs = attributes.attrs;
+		attributes.mw.attrs = attributes.attrs;
 		el.setAttribute( 'data-mw', JSON.stringify( attributes.mw ) );
 	}
 
