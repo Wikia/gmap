@@ -53,7 +53,7 @@ ve.ui.GMapEditDialog.prototype.initialize = function () {
 
 	// Apply
 	this.applyButton = new ve.ui.ButtonWidget( {
-		'$$': this.$$,
+		'$$': this.frame.$$,
 		'label': ve.msg( 'visualeditor-dialog-action-apply' ),
 		'flags': ['primary']
 	} );
