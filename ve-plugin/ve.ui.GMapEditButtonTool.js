@@ -1,13 +1,14 @@
 /**
- * GMat button tool.
+ * GMap button tool.
  *
  * @class
  * @extends ve.ui.DialogButtonTool
+ *
  * @constructor
  * @param {ve.ui.Toolbar} toolbar
  * @param {Object} [config] Config options
  */
- ve.ui.GMapEditButtonTool = function VeUiGMapEditButtonTool( toolbar, config ) {
+ve.ui.GMapEditButtonTool = function VeUiGMapEditButtonTool( toolbar, config ) {
 	// Parent constructor
 	ve.ui.DialogButtonTool.call( this, toolbar, config );
 };
