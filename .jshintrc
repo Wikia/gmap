@@ -1,6 +1,7 @@
 {
+	/* Common */
+
 	// Enforcing
-	"bitwise": true,
 	"camelcase": true,
 	"curly": true,
 	"eqeqeq": true,
@@ -11,24 +12,34 @@
 	"noempty": true,
 	"nonew": true,
 	"quotmark": "single",
-	"regexp": true,
 	"trailing": true,
 	"undef": true,
 	"unused": true,
+	// Legacy
+	"onevar": true,
 
+	/* Local */
+
+	// Enforcing
+	"bitwise": true,
+	"forin": false,
+	"plusplus": false,
+	"regexp": true,
+	"strict": false,
 	// Relaxing
+	"es5": false,
 	"multistr": true,
 	"smarttabs": true,
-
 	// Environment
-	"node": true,
-
+	"browser": true,
+	"jquery": true,
 	// Legacy
 	"nomen": true,
-	"onevar": true,
-	"white": true,
 
 	"predef": [
-		"phantom"
+		"OO",
+		"ve",
+		"unicodeJS",
+		"QUnit"
 	]
 }
