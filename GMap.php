@@ -3,6 +3,11 @@
  * GMap extension
  */
 
+/* Setup */
+
+// i18n
+$wgExtensionMessagesFiles['GMap'] = dirname( __FILE__ ) . '/GMap.i18n.php';
+
 // Define ResourceLoader module
 $wgResourceModules['ext.gmap'] = array(
 	'scripts' => array(
@@ -10,6 +15,13 @@ $wgResourceModules['ext.gmap'] = array(
 		'js/ve.ce.GMapNode.js',
 		'js/ve.ui.GMapEditButtonTool.js',
 		'js/ve.ui.GMapEditDialog.js'
+	),
+	'messages' => array(
+		'visualeditor-dialog-gmap-latitude',
+		'visualeditor-dialog-gmap-longitude',
+		'visualeditor-dialog-gmap-width',
+		'visualeditor-dialog-gmap-height',
+		'visualeditor-dialog-gmap-zoom'
 	),
 	'dependencies' => array( 'ext.visualEditor.core' ),
 	'localBasePath' => dirname( __FILE__ ),

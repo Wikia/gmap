@@ -16,7 +16,7 @@ ve.ui.GMapEditDialog.prototype.initialize = function () {
 	this.latLabel = new ve.ui.InputLabelWidget( {
 		'$$': this.frame.$$,
 		'input': this.latInput,
-		'label': 'Latitude'
+		'label': ve.msg( 'visualeditor-dialog-gmap-latitude' )
 	} );
 
 	// Longitude
@@ -24,15 +24,7 @@ ve.ui.GMapEditDialog.prototype.initialize = function () {
 	this.longLabel = new ve.ui.InputLabelWidget( {
 		'$$': this.frame.$$,
 		'input': this.longInput,
-		'label': 'Longitude'
-	} );
-
-	// Zoom
-	this.zoomInput = new ve.ui.TextInputWidget( { '$$': this.frame.$$ } );
-	this.zoomLabel = new ve.ui.InputLabelWidget( {
-		'$$': this.frame.$$,
-		'input': this.zoomInput,
-		'label': 'Zoom'
+		'label': ve.msg( 'visualeditor-dialog-gmap-longitude' )
 	} );
 
 	// Width
@@ -40,7 +32,7 @@ ve.ui.GMapEditDialog.prototype.initialize = function () {
 	this.widthLabel = new ve.ui.InputLabelWidget( {
 		'$$': this.frame.$$,
 		'input': this.widthInput,
-		'label': 'Width'
+		'label': ve.msg( 'visualeditor-dialog-gmap-width' )
 	} );
 
 	// Height
@@ -48,24 +40,39 @@ ve.ui.GMapEditDialog.prototype.initialize = function () {
 	this.heightLabel = new ve.ui.InputLabelWidget( {
 		'$$': this.frame.$$,
 		'input': this.heightInput,
-		'label': 'Height'
+		'label': ve.msg( 'visualeditor-dialog-gmap-height' )
+	} );
+
+	// Zoom
+	this.zoomInput = new ve.ui.TextInputWidget( { '$$': this.frame.$$ } );
+	this.zoomLabel = new ve.ui.InputLabelWidget( {
+		'$$': this.frame.$$,
+		'input': this.zoomInput,
+		'label': ve.msg( 'visualeditor-dialog-gmap-zoom' )
 	} );
 
 	// Apply
 	this.applyButton = new ve.ui.ButtonWidget( {
 		'$$': this.frame.$$,
 		'label': ve.msg( 'visualeditor-dialog-action-apply' ),
-		'flags': ['primary']
+		'flags': [ 'primary' ]
 	} );
 
 	// Events
 	this.applyButton.connect( this, { 'click': [ 'close', 'apply' ] } );
 
-	this.$body.append( this.latLabel.$, this.latInput.$ );
-	this.$body.append( this.longLabel.$, this.longInput.$ );
-	this.$body.append( this.zoomLabel.$, this.zoomInput.$ );
-	this.$body.append( this.widthLabel.$, this.widthInput.$ );
-	this.$body.append( this.heightLabel.$, this.heightInput.$ );
+	this.$body.append(
+		this.latLabel.$,
+		this.latInput.$,
+		this.longLabel.$,
+		this.longInput.$,
+		this.zoomLabel.$,
+		this.zoomInput.$,
+		this.widthLabel.$,
+		this.widthInput.$,
+		this.heightLabel.$,
+		this.heightInput.$
+	);
 	this.$foot.append( this.applyButton.$ );
 };
 
