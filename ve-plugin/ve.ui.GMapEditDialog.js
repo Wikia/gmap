@@ -6,7 +6,7 @@ ve.ui.GMapEditDialog = function VeUiGMapEditDialog( surface, config ) {
 
 ve.inheritClass( ve.ui.GMapEditDialog, ve.ui.Dialog );
 
-ve.ui.GMapEditDialog.static.icon = 'picture';
+ve.ui.GMapEditDialog.static.icon = 'map';
 
 ve.ui.GMapEditDialog.prototype.initialize = function () {
 	ve.ui.Dialog.prototype.initialize.call( this );

@@ -6,7 +6,7 @@ ve.inheritClass( ve.ui.GMapEditButtonTool, ve.ui.DialogButtonTool );
 
 ve.ui.GMapEditButtonTool.static.name = 'gmapEdit';
 
-ve.ui.GMapEditButtonTool.static.icon = 'picture'; // TODO: Create map icon
+ve.ui.GMapEditButtonTool.static.icon = 'map';
 
 ve.ui.GMapEditButtonTool.static.dialog = 'gmapEdit';
 

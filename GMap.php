@@ -11,10 +11,13 @@ $wgExtensionMessagesFiles['GMap'] = dirname( __FILE__ ) . '/GMap.i18n.php';
 // Define ResourceLoader module
 $wgResourceModules['ext.gmap'] = array(
 	'scripts' => array(
-		'js/ve.dm.GMapNode.js',
-		'js/ve.ce.GMapNode.js',
-		'js/ve.ui.GMapEditButtonTool.js',
-		'js/ve.ui.GMapEditDialog.js'
+		've-plugin/ve.dm.GMapNode.js',
+		've-plugin/ve.ce.GMapNode.js',
+		've-plugin/ve.ui.GMapEditButtonTool.js',
+		've-plugin/ve.ui.GMapEditDialog.js'
+	),
+	'styles' => array(
+		've-plugin/gmap.css',
 	),
 	'messages' => array(
 		'visualeditor-dialog-gmap-latitude',
