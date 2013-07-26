@@ -5,7 +5,7 @@ ve.ce.GMapNode = function VeCeGMapNode( model, config ) {
 
 	ve.ce.FocusableNode.call( this );
 
-	this.$imgMap = $( '<img>' ).appendTo( this.$ );
+	this.$image = $( '<img>' ).appendTo( this.$ );
 	this.updateMapUrl();
 };
 
@@ -25,16 +25,19 @@ ve.ce.GMapNode.prototype.onAttributeChange = function () {
 
 ve.ce.GMapNode.prototype.updateMapUrl = function() {
 	var params = this.model.getAttribute( 'params' );
-	this.$imgMap.attr(
-		'src',
-		this.getStaticMapUrl(
-			params.lat,
-			params.long,
-			params.width,
-			params.height,
-			params.zoom
+	this.$image
+		.attr(
+			'src',
+			this.getStaticMapUrl(
+				params.lat,
+				params.long,
+				params.width,
+				params.height,
+				params.zoom
+			)
 		)
-	);
+		.height( params.height )
+		.width( params.width );
 };
 
 ve.ce.GMapNode.prototype.getStaticMapUrl = function( latitude, longitude, width, height, zoom ) {

@@ -37,5 +37,5 @@ function wfMapRender( $input, array $args, Parser $parser, PPFrame $frame ) {
 	$params['zoom'] = $args['zoom'];
 	$params['maptype'] = 'roadmap';
 	$params['sensor'] = 'false';
-	return '<div style="float: left;"><img src="http://maps.googleapis.com/maps/api/staticmap?' . wfArrayToCgi( $params ) . '"/></div>';
+	return '<div style="float: right; margin: 0 0 1em 1em;"><img src="http://maps.googleapis.com/maps/api/staticmap?' . wfArrayToCgi( $params ) . '"/></div>';
 }
