@@ -8,7 +8,7 @@
  * @param {number} [length] Length of content data in document
  * @param {Object} [element] Reference to element in linear model
  */
- ve.dm.GMapNode = function VeDmGMapNode( length, element ) {
+ve.dm.GMapNode = function VeDmGMapNode( length, element ) {
 	// Parent constructor
 	ve.dm.LeafNode.call( this, 0, element );
 };
