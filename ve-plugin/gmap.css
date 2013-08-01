@@ -2,3 +2,16 @@
 	/* @embed */
 	background-image: url(map.png);
 }
+
+
+/* Orange highlighting for better contrast during demo */
+.ve-ce-documentNode::selection,
+.ve-ce-branchNode::selection,
+.ve-ce-protectedNode-shield::selection,
+.ve-ce-focusableNode-highlight {
+	background-color: orange;
+}
+.ve-ce-protectedNode-phantom {
+	background-color: rgba( 244, 166, 70, .1 );
+	box-shadow: inset 0 0 0 5px orange;
+}
