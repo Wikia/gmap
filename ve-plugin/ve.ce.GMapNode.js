@@ -17,7 +17,7 @@ ve.ce.GMapNode = function VeCeGMapNode( model, config ) {
 	ve.ce.FocusableNode.call( this );
 
 	// Setup
-	this.$image = $( '<img>' ).appendTo( this.$ );
+	this.$image = this.$$( '<img>' ).appendTo( this.$ );
 	this.setImageURL();
 };
 

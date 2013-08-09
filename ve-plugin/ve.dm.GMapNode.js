@@ -21,11 +21,9 @@ ve.inheritClass( ve.dm.GMapNode, ve.dm.LeafNode );
 
 ve.dm.GMapNode.static.name = 'gmap';
 
-ve.dm.GMapNode.static.isContent = false;
-
 ve.dm.GMapNode.static.matchRdfaTypes = [ 'mw:Extension/gmap' ];
 
-ve.dm.GMapNode.static.enableAboutGrouping = true; // It's necessary because of the bug in Parsoid
+ve.dm.GMapNode.static.enableAboutGrouping = true;
 
 ve.dm.GMapNode.static.toDataElement = function ( domElements ) {
 	var dataElement,
